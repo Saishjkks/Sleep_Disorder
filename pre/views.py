@@ -64,17 +64,17 @@ def predict(request):
             if decoded_prediction == "Sleep Apnea":
                 show_suggestions = True
                 suggestions_content = [
-                "\u2705 Use a CPAP Machine – A Continuous Positive Airway Pressure (CPAP) machine keeps your airway open while sleeping.",
-                "\u2705 Maintain a Healthy Weight – Losing excess weight can significantly reduce airway obstruction.",
-                "\u2705 Change Sleep Position – Sleeping on your side instead of your back helps keep the airway open.",
-                "\u2705 Avoid Alcohol & Sedatives – These relax throat muscles, increasing airway collapse risk.",
-                "\u2705 Quit Smoking – Smoking increases inflammation and fluid retention in the airway.",
-                "\ud83e\uddec Consider Oral Appliances – Special mouthpieces help adjust jaw position for better airflow.",
-                "\ud83e\uddec Explore Surgery (If Necessary) – Procedures like UPPP (Uvulopalatopharyngoplasty) or Inspire Therapy may be options in severe cases.",
-                "\ud83e\uddec Use a Humidifier – Dry air can irritate the airway; a humidifier adds moisture for easier breathing.",
-                "\ud83d\udca4 Follow a Sleep Schedule – Sleep and wake up at the same time daily to regulate your body clock.",
-                "\ud83d\udca4 Avoid Heavy Meals Before Bed – A full stomach can put pressure on the diaphragm and worsen breathing.",
-                "\ud83d\udca4 Exercise Regularly – Moderate activity can improve overall sleep quality and reduce symptoms."
+               ✅ Use a CPAP Machine – A Continuous Positive Airway Pressure (CPAP) machine keeps your airway open while sleeping.
+✅ Maintain a Healthy Weight – Losing excess weight can significantly reduce airway obstruction.
+✅ Change Sleep Position – Sleeping on your side instead of your back helps keep the airway open.
+✅ Avoid Alcohol & Sedatives – These relax throat muscles, increasing airway collapse risk.
+✅ Quit Smoking – Smoking increases inflammation and fluid retention in the airway.
+🦷 Consider Oral Appliances – Special mouthpieces help adjust jaw position for better airflow.
+🦷 Explore Surgery (If Necessary) – Procedures like UPPP (Uvulopalatopharyngoplasty) or Inspire Therapy may be options in severe cases.
+🦷 Use a Humidifier – Dry air can irritate the airway; a humidifier adds moisture for easier breathing.
+💤 Follow a Sleep Schedule – Sleep and wake up at the same time daily to regulate your body clock.
+💤 Avoid Heavy Meals Before Bed – A full stomach can put pressure on the diaphragm and worsen breathing.
+💤 Exercise Regularly – Moderate activity can improve overall sleep quality and reduce symptoms.
 
                 ]
             elif decoded_prediction == 'nan' or isinstance(decoded_prediction, float) and np.isnan(decoded_prediction):
@@ -129,6 +129,7 @@ def predict(request):
         
 
     return render(request, 'index1.html')
+
 
 
 
